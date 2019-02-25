@@ -1,0 +1,24 @@
+<!--pages/cinema/cinema.wxml-->
+<view class='container'>
+  <block wx:for="{{cinemas}}" wx:for-item="item">
+    <view class='item'>
+      <view class='item-left'>
+        <!--影院名称-->
+        <view>
+          <text class='title'>{{item.title}}</text>
+        </view>
+        <!--影院地址-->
+        <view>
+          <text class='subTitle'>{{item.subTitle}}</text>
+        </view>
+        <!--座位类别-->
+        <view>
+          <text class='tag'>{{item.tag}}</text>
+        </view>
+      </view>
+      <view class='item-right'>
+        <text class='price'>{{item.price}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/movie/movie.wxml-->
+<view class='container'>
+
+  <!-- 滑块视图（轮播图）
+    indicator-dots='true' 是否显示面板指示点
+    autoplay='true' 是否自动切换图片
+    interval='3000' 自动切换时间间隔 单位：毫秒
+    duration='1000' 滑动动画时长 单位：毫秒
+  -->
+  <swiper class='swiper_box' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
+    <!-- 只能放swiper-item
+       wx:for="" 绑定一个数组，可以使用数组中的数据重复渲染该组件
+       默认数组当前的下标变量名为index，数组当前项的变量名为item
+    -->
+    <swiper-item wx:for="{{imgs}}" wx:for-item="item">
+      <image src='{{item.images}}'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 文字：正在上映 -->
+  <view class='text'>
+    <view class='lineflag'></view>
+    <text>正在上映</text>
+  </view>
+
+  <!--所有影片信息-->
+  <block wx:for="{{movie}}" wx:for-item="item">
+    <!--每部电影-->
+    <view class='item'>
+      <!--左边部分：影片海报-->
+      <view class='item-left'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <!--中间部分：电影名、简介、演员-->
+      <view class='item-middle'>
+        <!--电影名-->
+        <view>
+          <text class='title'>{{item.title}}</text>
+        </view>
+        <!--简介-->
+        <view>
+          <text class='sub_title'>{{item.subTitle}}</text>
+        </view>
+        <!--演员-->
+        <view>
+          <text class='actor'>{{item.actor}}</text>
+        </view>
+      </view>
+      <!--右边部分：评分和购票方式-->
+      <view class='item-right'>
+        <!-- 评分 -->
+        <view>
+          <text class='score'>{{item.score}}</text>
+        </view>
+        <!-- 购票方式 -->
+        <view>
+          <text class='action'>{{item.action}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

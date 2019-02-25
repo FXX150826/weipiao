@@ -1,0 +1,59 @@
+/* pages/cinema/cinema.wxss */
+/* pages/movie/movie.wxss */
+
+/*设置类样式需在类名前加英文点*/
+
+.container {
+  background-color: #f2f2f2;
+}
+.item {
+  width: 100%;
+  background-color: #fff;
+  color: #787878;
+  /*边框：粗细 实线 颜色*/
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px;
+  /*弹性布局，可为盒装布局提供最大的灵活性*/
+  display: flex;
+  flex-direction: row;
+}
+
+.item-left {
+  margin-left: 10px;
+  margin-top: 5px;
+  /*溢出隐藏  */
+  overflow: hidden;
+  width: 250px;
+  height: 95px;
+}
+
+.title {
+  font-size: 16px;
+  color: #333;
+}
+
+.subTitle {
+  font-size: 14px;
+  color: #666;
+  
+}
+
+.tag{
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #29cc6d;
+  color: #29cc6d;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.item-right{
+  margin-left: 10px;
+  margin-top:10px;
+  width: 20%;
+}
+.price{
+  font-size: 12px;
+  color: #cf616a;
+}
